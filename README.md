@@ -8,6 +8,9 @@
 
 A collection of sample implementations for **custom skill functionality in Azure AI Search**.
 
+> **Previously known as:** **Azure Search Power Skills**  
+> This repository may still be referenced by its former name in older documentation, links, and conversations.
+
 > **Terminology clarification**  
 > In this repository, “skills” refers to **Azure AI Search skillset enrichment skills** (including **Custom Web API skills** used during indexing), not agent/copilot skills.
 
@@ -84,15 +87,15 @@ This project provides the following custom skills:
 
 | Skill | Description | Type |Language | Environment |Deployment|
 | --- | ----------- | -------| ----------- | ----------- | ----------- |
-| [Chat completion Custom Skill](ChatCompletionCustomSkill/README.md) | Demonstrates how to use chat-completion inference capabilities of language models (including Azure OpenAI models) deployed in Azure AI Foundry as a custom skill in an Azure AI Search skillset. | Text | ![python](https://img.shields.io/badge/language-python-orange) | Azure Functions | |
-| [GeoPointFromName](Geo/GeoPointFromName/README.md) | Retrieves coordinates from place names and addresses. | Geography | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [Chat completion Custom Skill](ChatCompletionCustomSkill/README.md) | Demonstrates how to use chat-completion inference capabilities of language models (including Azure OpenAI models) deployed in Azure AI Foundry in a custom web API skillset in Azure AI Search. | Text | ![python](https://img.shields.io/badge/language-python-orange) | Azure Functions | [![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://ms.portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-power-skills%2Fmain%2FChatCompletionCustomSkill%2Fazuredeploy.json) |
+| [GeoPointFromName](Geo/GeoPointFromName/README.md) | Retrieves coordinates from place names and addresses. | Geography | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | [![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://ms.portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-power-skills%2Fmaster%2FGeo%2FGeoPointFromName%2Fazuredeploy.json) |
 | [Distinct](Text/Distinct/README.md) | De-duplicates a list of terms. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
-| [TextAnalyticsForHealth](Text/TextAnalyticsForHealth/README.md) | A wrapper for the Text Analytics for Health API. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
-| [TextQualityWatchdog](Text/TextQualityWatchdog/README.md) | Uses a pretrained language model to detect low-quality text extracted during document cracking. | Text | ![python](https://img.shields.io/badge/language-python-orange) | Azure Functions | |
+| [TextAnalyticsForHealth](Text/TextAnalyticsForHealth/README.md) | A wrapper for the Text Analytics for Health API. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | [![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://ms.portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/Azure-Samples/azure-search-power-skills/main/Text/TextAnalyticsForHealth/azuredeploy.json) |
+| [TextQualityWatchdog](Text/TextQualityWatchdog/README.md) | Uses a pretrained language model to detect low-quality text extracted during document cracking. | Text | ![python](https://img.shields.io/badge/language-python-orange) | Azure Function and Azure Open AI endpoint | |
 | [DecryptBlobFile](Utils/DecryptBlobFile/README.md) | Downloads, decrypts, and returns a file previously encrypted and stored in Azure Blob Storage. | Utility | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
 | [GetFileExtension](Utils/GetFileExtension/README.md) | Returns the filename and extension as separate values to allow filtering on document type. | Utility | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
-| [HelloWorld](Template/HelloWorld/README.md) | A minimal skill that can be used as a starting point or template for your own skills. | Template | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
-| [PythonFastAPI](Template/PythonFastAPI/README.md) | A production web server and API scaffold for a Python power skill. | Template | ![python](https://img.shields.io/badge/language-python-orange) | Containerized FastAPI | |
+| [HelloWorld](Template/HelloWorld/README.md) | A minimal skill that can be used as a starting point or template for your own skills. | Template | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | [![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://ms.portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-power-skills%2Fmain%2FTemplate%2FHelloWorld%2Fazuredeploy.json) |
+| [PythonFastAPI](Template/PythonFastAPI/README.md) | A production web server and API scaffold for a Python power skill. | Template | ![python](https://img.shields.io/badge/language-python-orange) | Azure Functions | |
 | [VideoIndexer](Video/VideoIndexer/README.md) | Extracts insights from video content for indexing workflows. | Vision | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
 
 
@@ -101,16 +104,16 @@ This project provides the following custom skills:
 
 ### Prerequisites
 
-In order to use the functions in this project, you'll need an active Azure subscription. Most of the functions can be used on their own for quick evaluation and experimentation, but they are meant to be integrated into an Azure AI Search indexing pipeline.
+In order to use the functions in this project, you'll need an active Azure subscription. Most of the functions can be used on their own for quick evaluation and experimentation, but they are meant for integration in Azure AI Search enrichment pipelines.  
 Each function may also add its own specific requirements, such as API keys for services they leverage.
 
-[Visual Studio](https://visualstudio.microsoft.com/) is recommended, but not required. You need a recent version of the C# compiler. [Postman](https://www.postman.com/) is highly recommended as a way to call and test functions directly.
+[Visual Studio](https://visualstudio.microsoft.com/) is recommended, but not required. You need a recent version of the C# compiler.
 
 ### Installation and deployment
 
 If using Visual Studio with the Azure workload installed, no installation is required, and the functions can just be run locally using F5.
 
-Deployment of a function to Azure can be done [through Visual Studio](https://learn.microsoft.com/azure/azure-functions/deployment-zip-push), the Deploy to Azure button, or [continuous deployment](https://learn.microsoft.com/azure/azure-functions/functions-continuous-deployment).
+Deployment of a function to Azure can be done [through Visual Studio](https://learn.microsoft.com/azure/azure-functions/deployment-zip-push), the Deploy to Azure button, or [continuous deployment](https://learn.microsoft.com/azure/azure-functions/functions-continuous-deployment) from source control.
 
 Some functions may require setting environment variables or configuration entries. Please refer to the readme file in the function's directory.
 
@@ -120,7 +123,7 @@ Some functions may require setting environment variables or configuration entrie
 2. Open the PowerSkills solution in Visual Studio
 3. Set the project for the function to test as the startup project
 4. Hit F5
-5. Experiment with calling the function using Postman
+5. Experiment with calling the function using your preferred HTTP client or test harness
 
 You can also create your own skills using [our Hello World template skill](Template/HelloWorld/README.md) as a starting point 
 or if you are using python [our FastAPI template skill](Template/PythonFastAPI/README.md).
@@ -129,8 +132,8 @@ or if you are using python [our FastAPI template skill](Template/PythonFastAPI/R
 
 Here are a few suggestions of simple contributions to get you started:
 * Improve documentation: sample code, better documentation are great ways to improve your understanding of existing code and to help others do the same.
-* Configuration: some skills can be configured through application settings and environment variables. You can use existing skills in this repo (for example, Azure Function-based samples under `Text/`, `Vision/`, and `Utils/`) as references for this pattern.
-* For skills that rely on external Azure resources or APIs (for example, skills under `Video/VideoIndexer` or `Text/TextAnalyticsForHealth`), consider adding deployment templates and setup instructions to make onboarding easier.
+* Configuration: some skills can be configured through application settings and environment variables. You can use existing skills in this repo (for example, Azure Function-based samples under `Text/`, `Utils/`, `Template/`) as references for clearer setup guidance and consistent config naming.
+* For skills that rely on external Azure resources or APIs (for example, skills under `Video/VideoIndexer` or `Text/TextAnalyticsForHealth`), consider adding deployment templates and setup instructions to simplify onboarding and reproducibility.
 
 ## Resources
 

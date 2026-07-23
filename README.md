@@ -24,6 +24,7 @@ This project provides the following custom skills:
 | [GetFileExtension](Utils/GetFileExtension/README.md) | Returns the filename and extension as separate values to allow filtering on document type. | Utility | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
 | [HelloWorld](Template/HelloWorld/README.md) | A minimal skill that can be used as a starting point or template for your own skills. | Template | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
 | [PythonFastAPI](Template/PythonFastAPI/README.md) | A production web server and API scaffold for a Python power skill. | Template | ![python](https://img.shields.io/badge/language-python-orange) | Azure Functions | |
+| [VideoIndexer](Video/VideoIndexer/README.md) | Extracts insights from video content for indexing workflows. | Vision | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
 
 
 

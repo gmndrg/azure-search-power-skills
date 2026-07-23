@@ -129,8 +129,8 @@ or if you are using python [our FastAPI template skill](Template/PythonFastAPI/R
 
 Here are a few suggestions of simple contributions to get you started:
 * Improve documentation: sample code, better documentation are great ways to improve your understanding of existing code and to help others do the same.
-* Configuration: some skills can be configured through [application settings and environment variables](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Vision/AnalyzeForm/AnalyzeForm.cs#L14-L22). Exploring and expanding this pattern could make skills easier to maintain.
-* For skills that rely on an external Azure resource (such as [Bing Entity Search](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Text/BingEntitySearch/BingEntitySearch.cs#L27-L34)), consider adding deployment templates and setup instructions.
+* Configuration: some skills can be configured through application settings and environment variables. You can use existing skills in this repo (for example, Azure Function-based samples under `Text/`, `Vision/`, and `Utils/`) as references for this pattern.
+* For skills that rely on external Azure resources or APIs (for example, skills under `Video/VideoIndexer` or `Text/TextAnalyticsForHealth`), consider adding deployment templates and setup instructions to make onboarding easier.
 
 ## Resources
 

@@ -104,13 +104,13 @@ This project provides the following custom skills:
 In order to use the functions in this project, you'll need an active Azure subscription. Most of the functions can be used on their own for quick evaluation and experimentation, but they are meant to be integrated into an Azure AI Search indexing pipeline.
 Each function may also add its own specific requirements, such as API keys for services they leverage.
 
-[Visual Studio](https://visualstudio.microsoft.com/) is recommended, but not required. You need a recent version of the C# compiler. [Postman](https://www.getpostman.com/) is highly recommended as a way to call and test functions directly.
+[Visual Studio](https://visualstudio.microsoft.com/) is recommended, but not required. You need a recent version of the C# compiler. [Postman](https://www.postman.com/) is highly recommended as a way to call and test functions directly.
 
 ### Installation and deployment
 
 If using Visual Studio with the Azure workload installed, no installation is required, and the functions can just be run locally using F5.
 
-Deployment of a function to Azure can be done [through Visual Studio](https://docs.microsoft.com/azure/azure-functions/deployment-zip-push), the Deploy to Azure button, or [continuous deployment](https://docs.microsoft.com/azure/azure-functions/functions-continuous-deployment).
+Deployment of a function to Azure can be done [through Visual Studio](https://learn.microsoft.com/azure/azure-functions/deployment-zip-push), the Deploy to Azure button, or [continuous deployment](https://learn.microsoft.com/azure/azure-functions/functions-continuous-deployment).
 
 Some functions may require setting environment variables or configuration entries. Please refer to the readme file in the function's directory.
 
@@ -128,14 +128,15 @@ or if you are using python [our FastAPI template skill](Template/PythonFastAPI/R
 ## Up for grabs
 
 Here are a few suggestions of simple contributions to get you started:
-* Improve documentation: sample code, better documentation are great ways to improve your understanding of existing code and to help other do the same.
+* Improve documentation: sample code, better documentation are great ways to improve your understanding of existing code and to help others do the same.
 * Configuration: some skills can be configured through [application settings and environment variables](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Vision/AnalyzeForm/AnalyzeForm.cs#L14-L22). Exploring and expanding this pattern could make skills easier to maintain.
 * For skills that rely on an external Azure resource (such as [Bing Entity Search](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Text/BingEntitySearch/BingEntitySearch.cs#L27-L34)), consider adding deployment templates and setup instructions.
 
 ## Resources
 
 - [Contribution guidelines](CONTRIBUTING.md)
-- [Azure Search](https://azure.microsoft.com/services/search/)
-- [Azure Functions](https://azure.microsoft.com/services/functions/)
-- [JFK Files](https://github.com/microsoft/AzureSearch_JFK_Files)
+- [Azure AI Search documentation](https://learn.microsoft.com/azure/search/)
+- [Custom Web API skill (official docs)](https://learn.microsoft.com/azure/search/cognitive-search-custom-skill-web-api)
+- [Azure Functions documentation](https://learn.microsoft.com/azure/azure-functions/)
+- [JFK Files sample dataset](https://github.com/microsoft/AzureSearch_JFK_Files)
 - [Knowledge Mining Solution Accelerator Guide](https://github.com/Azure-Samples/azure-search-knowledge-mining)

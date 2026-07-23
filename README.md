@@ -6,7 +6,7 @@
 
 # Azure AI Search Power Skills
 
-Power Skills are a collection of useful functions to be deployed as custom skills for Azure AI Search. The skills can be used as [templates](Template/HelloWorld/README.md) or starting points for your own custom skills, or they can be deployed and used as they are if they happen to meet your requirements. We also invite you to contribute your own work by submitting a [pull request](https://github.com/Azure-Samples/azure-search-power-skills/compare).
+Power Skills are a collection of useful functions to be deployed as custom skills for Azure AI Search. The skills can be used as [templates](Template/HelloWorld/README.md) or starting points for your own custom skills.
 
 ## Skills
 
@@ -15,35 +15,24 @@ This project provides the following custom skills:
 
 | Skill | Description | Type |Language | Environment |Deployment|
 | --- | ----------- | -------| ----------- | ----------- | ----------- |
-| [Azure Open AI Custom Language Skill](AzureOpenAICustomLanguageModelSkill/README.md) | Demonstrates how to use one of Azure Open AI's language models for inference tasks in Azure AI foundry | Text | ![python](https://img.shields.io/badge/language-python-orange) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [Chat completion Custom Skill](ChatCompletionCustomSkill/README.md) | Demonstrates how to use the chat completion inference capabilities of language models (including those from Azure Open AI) deployed to Azure AI foundry | Text | ![python](https://img.shields.io/badge/language-python-orange) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [GeoPointFromName](Geo/GeoPointFromName/README.md) | retrieves coordinates from place names and addresses. | Geography | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [AcronymLinker](Text/AcronymLinker/README.md) | provides definitions for known acronyms. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [Anonymizer](Text/PresidioPIIAnonymization/README.md)  | Uses [Presidio](https://github.com/microsoft/presidio) to analyze and anonymize PII entities.  | Text | ![python](https://img.shields.io/badge/language-python-orange) | ![docker](https://img.shields.io/badge/deploy-Docker-blueviolet) | Manual |
-| [BingEntitySearch](Text/BingEntitySearch/README.md) | finds rich and structured information about public figures, locations, or organizations. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [CustomEntityLookup](/Text/CustomEntitySearch) | finds custom entity names in text. A custom skill implementation of the [custom entity lookup skill](https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-custom-entity-lookup), consider using in the cognitive skill instead of this custom skill implementation.   | Text|![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [CustomNER](/Text/CustomNER) | extracts your custom entities, using Natural Language Processing with [Text Analytics Custom NER](https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/custom-named-entity-recognition/overview)  | Text|![python](https://img.shields.io/badge/language-python-orange) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [CustomTextClassifier](/Text/CustomTextClassifier) | extracts your custom text classification, using Natural Language Processing with [Text Analytics Custom Text Classification](https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/custom-classification/overview)  | Text|![python](https://img.shields.io/badge/language-python-orange) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | Arm Template |
-| [Distinct](Text/Distinct/README.md) | de-duplicates a list of terms. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [Summarizer](Text/TextSummarization/README.md) | Uses a HuggingFace/FaceBook BART model to summarize text [BART-Large-CNN](https://huggingface.co/facebook/bart-large-cnn). | Text | ![python](https://img.shields.io/badge/language-python-orange) | ![docker](https://img.shields.io/badge/deploy-Docker-blueviolet) | Manual |
-| [TextAnalyticsForHealth](Text/TextAnalyticsForHealth/README.md) | A wrapper for the Text Analytics for Health API | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [TextQualityWatchdog](Text/TextQualityWatchdog/README.md) | Uses a pretrained language model to detect low quality text extracted during document cracking | Text | ![python](https://img.shields.io/badge/language-python-orange) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | Manual |
-| [Tokenizer](Text/Tokenizer/README.md) | extracts non-stop words from a text. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) |
-| [AbbyyOCR](Text/AbbyyOCR/README.md) | OCR to extract text from images using [ABBYY Cloud OCR](https://www.ocrsdk.com/). | Vision | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [FormRecognizer](Vision/FormRecognizer) | Use Form Recognizer to analyze a document. Form Recognizer skill supports the following model types Layout, Invoice, Receipt, ID, Business Card, General key value pairs,  Custom Form  | Vision | ![python](https://img.shields.io/badge/language-python-orange) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | Manual |
-| [AutoMLVisionClassifier](Vision/AutoMLVisionClassifier/README.md) | Gets your latest Data Labelling AML AutoML Vision model and runs inference on it | Vision | ![python](https://img.shields.io/badge/language-python-orange) | ![docker](https://img.shields.io/badge/deploy-Docker-blueviolet) | Manual |
-| [CustomVision](Vision/CustomVision/README.md) | classifies documents using [Custom Vision](https://customvision.ai) models. | Vision | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [HocrGenerator](Vision/HocrGenerator/README.md) | transforms the result of OCR into the hOCR format. | Vision | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [ImageClustering](Vision/ImageClusteringSkill/README.md) | Uses clustering to automatically group and label images | Vision | ![python](https://img.shields.io/badge/language-python-orange) | ![docker](https://img.shields.io/badge/deploy-Docker-blueviolet) | Manual |
-| [ImageSegmentation](Vision/ImageSegmentation/README.md) | Breakdown a full image or PDF page in subimages and upload them on Azure Blob Storage | Vision | ![python](https://img.shields.io/badge/language-python-orange) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | Manual |
-| [ImageSimilarity](Vision/ImageSimilarity/README.md) | Uses ResNet to find the top-n most similar images | Vision | ![python](https://img.shields.io/badge/language-python-orange) | ![docker](https://img.shields.io/badge/deploy-Docker-blueviolet) | Manual |
-| [P&ID Parser](Vision/PID/README.md) | Extracts equipment tags and text blocks from piping and instrumentation diagrams | Vision| ![python](https://img.shields.io/badge/language-python-orange) | ![docker](https://img.shields.io/badge/deploy-Docker-blueviolet) | Manual|
-| [DecryptBlobFile](Utils/DecryptBlobFile/README.md) | downloads, decrypts and returns a file that was previously encrypted and stored in Azure Blob Storage. | Utility | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [GetFileExtension](Utils/GetFileExtension/README.md) | returns the filename and extension as separate values allowing you to filter on document type. | Utility | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [ImageStore](Vision/ImageStore/README.md) | Stores and fetches base64-encoded images to and from blob storage. The [knowledge store](https://docs.microsoft.com/azure/search/knowledge-store-concept-intro) is a cleaner implementation of the pattern to save images to storage. | Utility |![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |  
-| [Embeddings](Vector/EmbeddingGenerator/README.md) | Generates vector embeddings with the [HuggingFace all-MiniLM-L6-v2 model](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) | Vector | ![python](https://img.shields.io/badge/language-python-orange) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | Manual | 
-| [HelloWorld](Template/HelloWorld/README.md) | A minimal skill that can be used as a starting point or template for your own skills. | Template | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | ![functions](https://img.shields.io/badge/deploy-Functions-blue) | ARM Template |
-| [PythonFastAPI](Template/PythonFastAPI/README.md) | A production web server and api scaffold for a python power skill | Template | ![python](https://img.shields.io/badge/language-python-orange) | ![docker](https://img.shields.io/badge/deploy-Docker-blueviolet) | Terraform template |
+| [Chat completion Custom Skill](ChatCompletionCustomSkill/README.md) | Demonstrates how to use chat-completion inference capabilities of language models (including Azure OpenAI models) deployed in Azure AI Foundry. | Text | ![python](https://img.shields.io/badge/language-python-orange) | Azure Functions | |
+| [GeoPointFromName](Geo/GeoPointFromName/README.md) | Retrieves coordinates from place names and addresses. | Geography | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [AcronymLinker](Text/AcronymLinker/README.md) | Provides definitions for known acronyms. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [Anonymizer](Text/PresidioPIIAnonymization/README.md)  | Uses [Presidio](https://github.com/microsoft/presidio) to analyze and anonymize PII entities.  | Text | ![python](https://img.shields.io/badge/language-python-orange) | Docker | |
+| [BingEntitySearch](Text/BingEntitySearch/README.md) | Finds rich and structured information about public figures, locations, or organizations. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [CustomEntityLookup](/Text/CustomEntitySearch) | Finds custom entity names in text. A custom skill implementation of the [custom entity lookup skill](https://learn.microsoft.com/azure/search/cognitive-search-skill-custom-entity-lookup). | Text |  |  |  |
+| [CustomNER](/Text/CustomNER) | Extracts your custom entities using Natural Language Processing with [Text Analytics Custom NER](https://learn.microsoft.com/azure/ai-services/language-service/custom-named-entity-recognition/overview). | Text |  |  |  |
+| [CustomTextClassifier](/Text/CustomTextClassifier) | Extracts your custom text classifications using Natural Language Processing with [Text Analytics Custom Text Classification](https://learn.microsoft.com/azure/ai-services/language-service/custom-text-classification/overview). | Text |  |  |  |
+| [Distinct](Text/Distinct/README.md) | De-duplicates a list of terms. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [Summarizer](Text/TextSummarization/README.md) | Uses a HuggingFace/Facebook BART model to summarize text: [BART-Large-CNN](https://huggingface.co/facebook/bart-large-cnn). | Text | ![python](https://img.shields.io/badge/language-python-orange) | Docker | |
+| [TextAnalyticsForHealth](Text/TextAnalyticsForHealth/README.md) | A wrapper for the Text Analytics for Health API. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [TextQualityWatchdog](Text/TextQualityWatchdog/README.md) | Uses a pretrained language model to detect low-quality text extracted during document cracking. | Text | ![python](https://img.shields.io/badge/language-python-orange) | Docker | |
+| [Tokenizer](Text/Tokenizer/README.md) | Extracts non-stop words from text. | Text | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [AbbyyOCR](Text/AbbyyOCR/README.md) | OCR extraction from images using [ABBYY Cloud OCR](https://www.ocrsdk.com/). | Vision | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [DecryptBlobFile](Utils/DecryptBlobFile/README.md) | Downloads, decrypts, and returns a file previously encrypted and stored in Azure Blob Storage. | Utility | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [GetFileExtension](Utils/GetFileExtension/README.md) | Returns the filename and extension as separate values to allow filtering on document type. | Utility | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [HelloWorld](Template/HelloWorld/README.md) | A minimal skill that can be used as a starting point or template for your own skills. | Template | ![C#](https://img.shields.io/badge/language-C%23-brightgreen) | Azure Functions | |
+| [PythonFastAPI](Template/PythonFastAPI/README.md) | A production web server and API scaffold for a Python power skill. | Template | ![python](https://img.shields.io/badge/language-python-orange) | Azure Functions | |
 
 
 
@@ -51,10 +40,10 @@ This project provides the following custom skills:
 
 ### Prerequisites
 
-In order to use the functions in this project, you'll need an active Azure subscription. Most of the functions can be used on their own for quick evaluation and experimentation, but they are meant to be used as part of an [Azure AI Search pipeline](https://docs.microsoft.com/azure/search/cognitive-search-quickstart-blob).
+In order to use the functions in this project, you'll need an active Azure subscription. Most of the functions can be used on their own for quick evaluation and experimentation, but they are meant to be used as custom skills in Azure AI Search.
 Each function may also add its own specific requirements, such as API keys for services they leverage.
 
-[Visual Studio](https://visualstudio.microsoft.com/) is recommended, but not required. You need a recent version of the C# compiler. [Postman](https://www.getpostman.com/) is highly recommended as a way to experiment and test skills.
+[Visual Studio](https://visualstudio.microsoft.com/) is recommended, but not required. You need a recent version of the C# compiler. [Postman](https://www.getpostman.com/) is highly recommended as a way to test your functions.
 
 ### Installation and deployment
 
@@ -79,8 +68,8 @@ or if you are using python [our FastAPI template skill](Template/PythonFastAPI/R
 
 Here are a few suggestions of simple contributions to get you started:
 * Improve documentation: sample code, better documentation are great ways to improve your understanding of existing code and to help other do the same.
-* Configuration: some skills can be configured through [application settings and environment variables](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Vision/AnalyzeForm/AnalyzeForm.cs#L46-L50). Some others still have [hard-coded configuration in the code](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Text/CustomEntitySearch/CustomEntityLookup.cs#L28-L31), that could be moved to be easier to configure.
-* For skills that rely on an external Azure resource (such as [Bing Entity Search](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Text/BingEntitySearch/BingEntitySearch.cs#L20)), improve the [deployment file](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Text/BingEntitySearch/azuredeploy.json) so it gives the user the option to create and configure that service automatically.
+* Configuration: some skills can be configured through [application settings and environment variables](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Vision/AnalyzeForm/AnalyzeForm.cs#L31-L37).
+* For skills that rely on an external Azure resource (such as [Bing Entity Search](https://github.com/Azure-Samples/azure-search-power-skills/blob/main/Text/BingEntitySearch/BingEntitySearch.cs#L20)), use [managed identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) to avoid including keys in your solution.
 
 ## Resources
 
